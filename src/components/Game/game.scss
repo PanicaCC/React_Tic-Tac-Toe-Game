@@ -1,0 +1,17 @@
+.game {
+  display: flex;
+  height: 100vh;
+  padding: 20vh 0;
+  flex-grow: 1;
+  background: #344355;
+
+  & > div {
+    display: flex;
+  }
+}
+
+.game-info {
+  width: 60%;
+  margin-left: 20px;
+  border-left: 2px solid #FFF;
+}
