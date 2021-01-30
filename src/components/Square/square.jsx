@@ -1,14 +1,15 @@
 import React from "react"
 import "./square.scss"
 
-class Square extends React.Component {
-    render() {
-        return (
-            <button className="square">
-                {/* TODO */}
-            </button>
-        );
-    }
+const Square = props => {
+    return (
+        <button
+            className="square"
+            onClick = { (event) => props.renderValueHandler(event) }
+        >
+            { props.value }
+        </button>
+    );
 }
 
 export default Square

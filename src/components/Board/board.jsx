@@ -1,18 +1,21 @@
 import React from "react"
-import Square from "../Square/square";
+import Square from "../Square/square"
 import "./board.scss"
 
 class Board extends React.Component {
+
     renderSquare(i) {
-        return <Square />;
+        return (
+            <Square
+                renderValueHandler = {() => this.props.renderValueHandler(i) }
+                value={this.props.squares[i]}
+            />
+        )
     }
 
     render() {
-        const status = 'Next player: X';
-
         return (
             <div>
-                <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -29,7 +32,7 @@ class Board extends React.Component {
                     {this.renderSquare(8)}
                 </div>
             </div>
-        );
+        )
     }
 }
 
