@@ -1,10 +1,7 @@
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-  color: #F9AA33;
+.board-row {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }
